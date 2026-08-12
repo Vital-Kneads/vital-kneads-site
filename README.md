@@ -72,10 +72,14 @@ Squarespace **website builder** subscription — the domain registration stays.
 
 ## Notes / intentional deviations from the original
 
-- Fonts: original used Adobe Typekit `hypatia-sans-pro` / `adorn-smooth-slab-serif`
-  (licensed, not redistributable). Replaced with self-hosted **Source Sans 3**
-  (Adobe humanist sans, same lineage as Hypatia Sans), set light (300) with 0.14em
-  tracking and loose leading to match the original's airy typesetting. Swap fonts
-  in `styles.css` if the exact Adobe fonts are wanted (needs an Adobe Fonts project).
+- Fonts: the original used three licensed Adobe Typekit fonts (not
+  redistributable). Free self-hosted stand-ins, all set to match the original's
+  metrics:
+  - Body / headline / page titles — `hypatia-sans-pro` → **Source Sans 3** (Adobe
+    humanist sans, same lineage), light (300) with 0.14em tracking + loose leading.
+  - Nav (whimsical) — `silverstein` → **Neucha** (approved by Milly).
+  - Buttons (whimsical slab) — `adorn-smooth-slab-serif` → **Neucha**.
+  Swap in `styles.css` (`--font` / `--display`) if the exact Adobe fonts are wanted
+  (needs an Adobe Fonts project).
 - Image-only pages (Philosophy, Contact) keep the original graphics verbatim, with
   the text transcribed into a hidden block for SEO / screen readers.
