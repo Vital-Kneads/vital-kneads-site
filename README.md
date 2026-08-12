@@ -15,7 +15,7 @@ testimonials/index.html    Testimonials
 contact/index.html         Contact
 404.html                   Not-found page
 assets/css/styles.css      Shared stylesheet
-assets/fonts/              Self-hosted Mulish (woff2)
+assets/fonts/              Self-hosted Source Sans 3 (woff2)
 assets/img/                Images (webp)
 ```
 
@@ -73,8 +73,9 @@ Squarespace **website builder** subscription — the domain registration stays.
 ## Notes / intentional deviations from the original
 
 - Fonts: original used Adobe Typekit `hypatia-sans-pro` / `adorn-smooth-slab-serif`
-  (licensed, not redistributable). Replaced with self-hosted **Mulish** as a close
-  free match (warm, wide humanist sans). Swap fonts in `styles.css` if exact Adobe
-  fonts are wanted (needs an Adobe Fonts web project).
+  (licensed, not redistributable). Replaced with self-hosted **Source Sans 3**
+  (Adobe humanist sans, same lineage as Hypatia Sans), set light (300) with 0.14em
+  tracking and loose leading to match the original's airy typesetting. Swap fonts
+  in `styles.css` if the exact Adobe fonts are wanted (needs an Adobe Fonts project).
 - Image-only pages (Philosophy, Contact) keep the original graphics verbatim, with
   the text transcribed into a hidden block for SEO / screen readers.
