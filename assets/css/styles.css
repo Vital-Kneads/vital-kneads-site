@@ -1,0 +1,271 @@
+/* ==========================================================================
+   Vital Kneads — shared styles
+   Rebuilt from the original Squarespace site. Brand color #38abbc (teal).
+   Type: Jost (self-hosted) as a close match to the original hypatia-sans-pro.
+   ========================================================================== */
+
+/* --- Fonts ------------------------------------------------------------- */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/jost-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/jost-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/jost-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/jost-600.woff2") format("woff2");
+}
+
+/* --- Design tokens ----------------------------------------------------- */
+:root {
+  --teal: #38abbc;
+  --teal-dark: #2c8b99;
+  --nav-link: #1c8cb5;
+  --ink: #0f1010;
+  --muted: #6a6f71;
+  --hairline: #e6e6e6;
+  --bg: #ffffff;
+  --header-bg: #fafafa;
+  --font: "Jost", "Century Gothic", "Questrial", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --maxw: 780px;
+}
+
+/* --- Reset-ish --------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--teal); }
+
+/* --- Skip link (accessibility) ---------------------------------------- */
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--teal); color: #000; padding: 10px 16px; z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* --- Header / logo ----------------------------------------------------- */
+.site-header {
+  background: var(--header-bg);
+  text-align: center;
+  padding: 34px 20px 0;
+}
+.site-header .logo {
+  display: inline-block;
+  width: 340px;
+  max-width: 78%;
+  margin: 0 auto 22px;
+}
+.site-header .logo img { width: 100%; }
+
+/* --- Navigation (light band, teal links) ------------------------------ */
+.site-nav {
+  background: #ededed;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px 16px;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 34px;
+}
+.site-nav a {
+  display: inline-block;
+  color: var(--nav-link);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 3.2px;
+  padding: 4px 2px;
+  transition: color 0.15s ease;
+}
+.site-nav a:hover,
+.site-nav a:focus { color: var(--teal); }
+.site-nav a[aria-current="page"] { color: var(--teal); }
+
+/* --- Main / layout ----------------------------------------------------- */
+main { min-height: 40vh; }
+.section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 56px 22px;
+  text-align: center;
+}
+.section.wide { max-width: 980px; }
+
+.tagline {
+  color: var(--teal);
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  margin: 0 0 26px;
+}
+.subhead {
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin: 0 0 30px;
+}
+.page-title {
+  color: var(--teal);
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0 0 34px;
+}
+.rule {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  max-width: 540px;
+  margin: 34px auto;
+}
+p { margin: 0 0 24px; }
+.prose p { text-align: center; }
+.prose { color: var(--ink); }
+
+/* --- Buttons ----------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: var(--teal);
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 20px 34px;
+  border-radius: 3px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.btn:hover,
+.btn:focus { background: var(--teal-dark); color: #000; }
+.btn-wrap { margin: 30px 0; }
+
+/* --- Images in content ------------------------------------------------- */
+.content-img {
+  margin: 30px auto;
+  border-radius: 2px;
+}
+.content-img.framed { box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+.portraits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin: 30px auto;
+}
+.portraits img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* --- Testimonials ------------------------------------------------------ */
+.testimonial {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.testimonial blockquote {
+  margin: 0 0 10px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+}
+.testimonial cite {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--muted);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* --- Footer ------------------------------------------------------------ */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+  padding: 46px 22px 40px;
+  color: var(--ink);
+  font-size: 15px;
+  letter-spacing: 0.6px;
+}
+.site-footer .brand {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.site-footer a { color: var(--teal); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer .tag { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+/* --- Bottom geometric banner (full-bleed decorative strip) ------------- */
+.geo-strip {
+  width: 100%;
+  aspect-ratio: 1600 / 388;
+  max-height: 300px;
+  background: #2f2f8a url("../img/geo-band.webp") center / cover no-repeat;
+}
+
+/* --- Visually-hidden (SEO / screen-reader text for image-only pages) --- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* --- Responsive -------------------------------------------------------- */
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+  .site-nav ul { gap: 4px 18px; padding: 14px 12px; }
+  .site-nav a { font-size: 12px; letter-spacing: 1.8px; }
+  .tagline { font-size: 24px; }
+  .page-title { font-size: 25px; letter-spacing: 3px; }
+  .section { padding: 44px 20px; }
+}
