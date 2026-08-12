@@ -1,51 +1,51 @@
 /* ==========================================================================
    Vital Kneads — shared styles
    Rebuilt from the original Squarespace site. Brand color #38abbc (teal).
-   Type: Jost (self-hosted) as a close match to the original hypatia-sans-pro.
+   Type: Mulish (self-hosted) as a close match to the original hypatia-sans-pro.
    ========================================================================== */
 
 /* --- Fonts ------------------------------------------------------------- */
 @font-face {
-  font-family: "Jost";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../fonts/jost-300.woff2") format("woff2");
+  src: url("../fonts/mulish-300.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Jost";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/jost-400.woff2") format("woff2");
+  src: url("../fonts/mulish-400.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/jost-500.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Jost";
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/jost-600.woff2") format("woff2");
+  src: url("../fonts/mulish-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/mulish-700.woff2") format("woff2");
 }
 
 /* --- Design tokens ----------------------------------------------------- */
 :root {
   --teal: #38abbc;
   --teal-dark: #2c8b99;
-  --nav-link: #1c8cb5;
+  --nav-active: #00eaff;
   --ink: #0f1010;
   --muted: #6a6f71;
   --hairline: #e6e6e6;
   --bg: #ffffff;
   --header-bg: #fafafa;
-  --font: "Jost", "Century Gothic", "Questrial", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
   --maxw: 780px;
 }
 
@@ -88,16 +88,16 @@ a { color: var(--teal); }
 }
 .site-header .logo img { width: 100%; }
 
-/* --- Navigation (light band, teal links) ------------------------------ */
+/* --- Navigation (geometric band, white links) ------------------------- */
 .site-nav {
-  background: #ededed;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background:
+    linear-gradient(rgba(18,20,60,0.28), rgba(18,20,60,0.28)),
+    #2f2f8a url("../img/geo-band.webp") center / cover no-repeat;
 }
 .site-nav ul {
   list-style: none;
   margin: 0 auto;
-  padding: 20px 16px;
+  padding: 22px 16px;
   max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
@@ -107,18 +107,19 @@ a { color: var(--teal); }
 }
 .site-nav a {
   display: inline-block;
-  color: var(--nav-link);
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;
-  letter-spacing: 3.2px;
+  letter-spacing: 3px;
   padding: 4px 2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.35);
   transition: color 0.15s ease;
 }
 .site-nav a:hover,
-.site-nav a:focus { color: var(--teal); }
-.site-nav a[aria-current="page"] { color: var(--teal); }
+.site-nav a:focus { color: var(--nav-active); }
+.site-nav a[aria-current="page"] { color: var(--nav-active); }
 
 /* --- Main / layout ----------------------------------------------------- */
 main { min-height: 40vh; }
@@ -169,7 +170,7 @@ p { margin: 0 0 24px; }
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   letter-spacing: 2px;
   padding: 20px 34px;
@@ -215,7 +216,7 @@ p { margin: 0 0 24px; }
 .testimonial cite {
   display: block;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   color: var(--muted);
   font-size: 15px;
