@@ -317,3 +317,50 @@ p { margin: 0 0 24px; }
   .page-title { font-size: 25px; letter-spacing: 3px; }
   .section { padding: 44px 20px; }
 }
+
+/* --- Studio location card (added Aug 2026: Left Coast Power Yoga) ------ */
+.studio-card {
+  max-width: 560px;
+  margin: 38px auto;
+  padding: 30px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  text-align: center;
+}
+.studio-card h2 {
+  color: var(--teal-text);
+  font-weight: 300;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 0 20px;
+}
+.studio-card p {
+  margin: 0 0 14px;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.9;
+}
+.studio-card p:last-child { margin-bottom: 0; }
+.studio-card .label {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 2px;
+}
+.note,
+.prose p.note {
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1.9;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+@media (max-width: 640px) {
+  .studio-card { padding: 24px 18px; }
+}
